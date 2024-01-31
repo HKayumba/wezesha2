@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --links: #05438E;
+    --buttons: #028C03;
+    --icons: #CBC035;
+    --header-footer: #00a5a1; /*#05438E*/
+    --background-color: #FFFFFF;
+    --text-color1: rgb(59, 59, 59);
+    --text-color2: black;
+    /* blue: 05438E*/
+    /* green: 028C03*/
+    /* yellow: CBC035*/
+}
+
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/backgroup-hero.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 4%;
+}
+nav img{
+    width: 100px;
+}
+nav a {
+    color: var(--background-color);
+    font-size: x-large;
+    text-decoration: none;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.nav-link ul li a::after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0%;
+    background: var(--buttons);
+    transition: .6s;
+}
+
+.nav-link ul li a:hover:after{
+    width: 100%;
+}
+
+.hero{
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/backgroup-hero.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.text-box{
+    width: 90%;
+    color: var(--icons);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 35px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: var(--background-color);
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-color);
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid;
+    background:var(--header-footer);
+    transition: 1s;
+}
+
+.header-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 600;
+    border: 1px solid #028C03;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: var(--buttons);
+    position: relative;
+    cursor: pointer;
+}
+
+.header-btn:hover{
+    border: 1px solid;
+    background: #29c929;
+    transition: 1s;
+}
+
+.icon{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-link ul li{
+        display: block;
+    }
+    .nav-link{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .icon{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* Why WEZESHA College */
+
+.why-wezesha{
+    background: #eafdfd;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.why-wezesha h2{
+    padding-top: 30px;
+    text-align: center;
+    color: var(--buttons);
+}
+
+.why-wezesha .col{
+    border: 1px solid var(--header-footer);
+    padding: 10px;
+    margin: 10px;
+}
+
+.why-wezesha p{
+    font-size: 12px;
+}
+
+.why-wezesha .col:hover{
+    background: var(--header-footer);
+}
+
+.why-wezesha .col:hover p{
+    color: white;
+}
+
+.testimonials{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+
+.testimonial{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    row-gap: 30px;
+    overflow: hidden;
+}
+
+.testimonials .image{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.testimonials .slide{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide p{
+    text-align: center;
+    padding: 0 160px;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.quote-icon{
+    font-size: 30px;
+    color: var(--buttons);
+    text-align: center;
+    font-weight: 900px;
+}
+
+.details .name{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--header-footer);
+    padding-top: 2px;
+}
+
+
+
+/* why wezesha is the best*/
+/*.why-wezesha{
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+*/
+/*course*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.course h2{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--buttons);
+}
+
+.course h4{
+    color: var(--text-color1);
+}
+.course p{
+    color: black;
+    text-align: center;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{
+    flex-basis: 31%;
+    background: #fcfcfc;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box; 
+}
+
+.course-col h4{
+    color: var(--header-footer);
+}
+
+.course-col:hover{
+    background-color: var(--header-footer);
+}
+.course-col:hover h4{
+    color: var(--buttons);
+}
+.course-col:hover p{
+    color: whitesmoke;
+}
+
+@media(max-width:700){
+    .row{
+        flex-direction: column;
+    }
+}
+
+.services{
+    background-color: var(--header-footer);
+}
+
+
+
+/*Frequelty asked question*/
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+   
+}
+
+h4 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+summary {
+    color: var(--text-color2);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.faq-item p {
+    color: var(--text-color1);
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+/*Footer*/
+.footer{
+    padding: 40px;
+    background-color: #221f1f;
+}
+.footer h5{
+    font-weight: 600;
+    color: #05438E;
+}
+.footer .p-2 p{
+    color: #bdbdbd;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .p-2 a{
+    color:#bdbdbd ; /* #CBC035*/
+    font-size: 12px;
+    padding: 5px;
+}
+.footer .p-2 a:hover{
+    color: #CBC035;/*#CBC035*/
+    font-size: 12px;
+}
+
+.footer .footer-line{
+    color: #bdbdbd;
+}
+.footer .copyright{
+    text-align: center;
+    color: #bdbdbd;
+}
+
+@media (max-width: 700) {
+    .footer{
+        width: 100%;
+    }
+    .footer h5{
+        font-weight: 300px;
+    }
+    .footer .p-2 p{
+        font-size: 10px;
+    }
+}
+
+/* Aboout */
+.header-about{
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/about-us.png);
+    background-position: center;
+    background-size: cover;
+}
+.header-about h1{
+    margin-top: 100px;
+}
+
+/* Vision, Mission and Purpose */
+
+.vision{
+    background-color: #e4e4e4;
+}
+.vision .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vision .section-content {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* About Value*/
+
+#values {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.values .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.values h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.values .value {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+}
+
+.values svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    color: var(--buttons);
+}
+
+.values h3 {
+    color: #007bff;
+}
+
+.values p {
+    color: #555;
+}
+
+
+
+/* Servives */
+.header-services{
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/services2.png);
+    background-position: center;
+    background-size: cover;
+}
+.header-services h1{
+    margin-top: 100px;
+}
+
+.service h2{
+    margin-top: 50px;
+    color: var(--buttons);
+}
+
+.service h5{
+    color: var(--header-footer);
+}
+
+.service p{
+    font-size: 12px;
+}
+
+.service .col-6:hover{
+    background-color: var(--header-footer);
+    cursor: pointer;
+}
+
+.service .col-6:hover h5{
+    color: var(--buttons);
+}
+
+.service .col-6:hover p{
+    color: white;
+}
+.service .service-icon{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.service .service-icon svg{
+    color: var(--buttons);
+}
+
+.service .col-6:hover svg{
+    color: var(--background-color);
+}
+
+.apply{
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/apply2.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.apply h3{
+    color: var(--icons);
+}
+.apply p{
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+}
+
+
+
+/* Contact */
+.header-contact{
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(73, 75, 82, 0.7),rgba(1,9,30,0.7)),url(./Images/contact-us.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.header-contact h1{
+    margin-top: 100px;
+}
+.contact-section {
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Contact Form styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    border: #05438E;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+button:hover{
+    opacity: .8;
+}
+
+/* Contact Details styles */
+.contact-details {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 13px;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+/*Google map img*/
+.google-map img{
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* Google Map styles */
+.google-map {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
